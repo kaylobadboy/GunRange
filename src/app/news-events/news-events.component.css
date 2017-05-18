@@ -1,0 +1,46 @@
+.post-container {
+  margin: 20px 0px 0 0;
+  border: 0px solid #333;
+  overflow: auto
+}
+.post-thumb-right {
+  float: right
+}
+.post-thumb-right img {
+  display: block
+}
+.post-thumb-left {
+  float: left
+}
+.post-thumb-left img {
+  display: block
+}
+
+.post-content {
+  margin-left: 210px
+}
+.post-title {
+  font-weight: bold;
+  font-size: 200%
+}
+.blocktext {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 300%;
+}
+.TitlePage{
+  display: table-cell;
+  vertical-align: middle
+}
+
+body{
+
+  margin: 0 auto;
+  padding: 20px 22px;
+  background: rgba(130,130,130,.4);
+  border: 1px solid;
+  border-top-color: rgba(255,255,255,.1);
+  border-left-color: rgba(255,255,255,.1);
+  border-bottom-color: rgba(60,60,60,.4);
+  border-right-color: rgba(60,60,60,.4);
+}

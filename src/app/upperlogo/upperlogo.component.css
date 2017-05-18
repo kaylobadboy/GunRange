@@ -1,0 +1,19 @@
+
+#TopImages {
+  z-index: 3;
+  position: relative;
+  padding: 0;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 20px;
+  text-align:center;
+}
+TopImages img{
+
+  height: auto;
+  width: auto;
+  vertical-align: middle;
+
+}
+
+

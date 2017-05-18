@@ -1,0 +1,11 @@
+body{
+
+  margin: 0 auto;
+  padding: 20px 22px;
+  background: rgba(130,130,130,.4);
+  border: 1px solid;
+  border-top-color: rgba(255,255,255,.1);
+  border-left-color: rgba(255,255,255,.1);
+  border-bottom-color: rgba(60,60,60,.4);
+  border-right-color: rgba(60,60,60,.4);
+}

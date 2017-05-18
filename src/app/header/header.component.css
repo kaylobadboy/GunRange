@@ -1,0 +1,63 @@
+
+.navbar-default, .navbar-inverse, .navbar-default .navbar-toggle{
+  border:2px;
+  padding: 15px 0px;
+  position: relative;
+  text-align: left;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.navbar-nav li a {
+  line-height: 50px;
+  height: 50px !important;
+  padding-top: 0;
+}
+
+ul {
+  margin: 1px;
+  padding: 0px;
+}
+
+
+.navbar-nav li {
+  position: relative;
+  float: none;
+  display: inline-block;
+}
+
+.dropdown-menu{
+  position:absolute;
+  right:0px;
+  padding: 0px 0px;
+
+}
+.dropdown-menu a{
+
+
+}
+li a {
+  display: block;
+  color: white;
+  border:2px;
+  background-color: #333;
+  text-align: center;
+  padding: 55px 39px;
+
+}
+li a:hover {
+
+  background-color: #555;
+  color: white;
+}
+
+
+
+.dropdown:focus, .dropdown:hover .dropdown-menu{
+  color:#000 !important;
+  display: block;
+  margin-top: 0;
+  background-color: #333;
+}
+
+.sample { background-image: url(../../assets/home/MainLogo.png); }
