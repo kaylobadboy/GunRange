@@ -1,8 +1,7 @@
 
 body{
 
-  margin: 0 auto;
-  padding: 20px 22px;
+
   background: rgba(130,130,130,.4);
   border: 1px solid;
   border-top-color: rgba(255,255,255,.1);
@@ -12,9 +11,7 @@ body{
 }
 
 
-form {
 
-}
 
 .form-style-1 {
   margin:10px auto;
