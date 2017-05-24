@@ -1,4 +1,16 @@
 
+#TopImages {
+  padding: 0;
+  margin-left:auto;
+  margin-right:auto;
+
+  text-align:center;
+}
+TopImages img{
+  height: auto;
+  width: auto;
+  vertical-align: middle;
+}
 body{
 
   margin: 0 auto;
@@ -13,6 +25,9 @@ body{
 
 
 form {
+
+  width: 24em;
+  display: inline-block;
 
 }
 
@@ -110,8 +125,8 @@ form{
 
 body{
 
-  margin: 0 auto;
-  padding: 20px 22px;
+  margin:auto;
+
   background: rgba(130,130,130,.4);
   border: 1px solid;
   border-top-color: rgba(255,255,255,.1);
@@ -119,23 +134,3 @@ body{
   border-bottom-color: rgba(60,60,60,.4);
   border-right-color: rgba(60,60,60,.4);
 }
-
-
-#TopImages {
-  z-index: 3;
-  position: relative;
-  padding: 0;
-  margin-left:auto;
-  margin-right:auto;
-  margin-top: 20px;
-  text-align:center;
-}
-TopImages img{
-
-  height: auto;
-  width: auto;
-  vertical-align: middle;
-
-}
-
-

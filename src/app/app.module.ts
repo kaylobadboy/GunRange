@@ -2,16 +2,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import {HeaderComponent} from  './header/header.component';
 import { AppComponent } from './app.component';
 import { UpperlogoComponent } from './upperlogo/upperlogo.component';
 import { HomeComponent } from './home/home.component';
 import { MembershipComponent } from './membership/membership.component';
 import { NewsEventsComponent } from './news-events/news-events.component';
 import { ContactComponent } from './contact/contact.component';
-import {routing} from "./app.routing";
+import {routing} from './app.routing';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { AgmCoreModule } from 'angular2-google-maps/core';
+import { SponsorstripComponent } from './components/bottomsponsors/sponsorstrip.component';
+import { FooterComponent } from './components/footer/footer.component';
+import {HeaderComponent} from './components/header/header.component';
+
 
 @NgModule({
   declarations: [
@@ -23,6 +26,8 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
     NewsEventsComponent,
     ContactComponent,
     AdminPanelComponent,
+    SponsorstripComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

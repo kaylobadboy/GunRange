@@ -36,9 +36,7 @@ html,body{
 body{
   background: url("http://www.kincardinenimrodclub.ca/images/80484.jpg") no-repeat  ;
 
-
-
-
+  background-size: cover;
 
   background-position: center;
   background-attachment: fixed;
@@ -47,11 +45,15 @@ body{
   overflow-x: hidden ! important;
   background-position:bottom left, bottom right;
   background-color: #464646;
-  min-width: 1280px;
+  min-width: 800px;
 
 }
 
-
+#wrapper {
+  margin-left:auto;
+  margin-right:auto;
+  width:960px;
+}
 
 
 .transparent {
@@ -77,17 +79,6 @@ body{
   height: 5em;
   min-width: 200px;
 }
-@media screen and (max-width: 460px) {
-  span {
-    display: none;
-  }
 
-  form {
-    text-align: center;
-    margin: 0 auto;
-  }
 
-  .header {
-    height: 7em;
-  }
-}
+
