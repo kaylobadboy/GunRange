@@ -32,12 +32,11 @@ export class EditHomePageComponent  {
     this.items.remove();
   }
 
-  check(item)
-  {
+  check(item) {
 
-    return item.type;
+  return item.type;
 
-  }
+}
 
 
 

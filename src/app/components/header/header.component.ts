@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {LoginService} from "../../services/login.service";
+import {AngularFireAuth} from "angularfire2/auth";
+import {Observable} from "rxjs/Observable";
+import * as firebase from 'firebase/app';
 
 @Component({
   selector: 'app-header',
@@ -6,11 +10,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css'],
 
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
-  constructor() { }
 
-  ngOnInit() {
+  constructor(public LoginService: LoginService) {
+
+
   }
 
 }

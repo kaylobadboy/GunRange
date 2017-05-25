@@ -1,4 +1,38 @@
 
+body{
+
+
+  background: rgba(130,130,130,.4);
+  border: 1px solid;
+  border-top-color: rgba(255,255,255,.1);
+  border-left-color: rgba(255,255,255,.1);
+  border-bottom-color: rgba(60,60,60,.4);
+  border-right-color: rgba(60,60,60,.4);
+}
+.container
+{
+  width: 75%;
+  margin: 16px auto;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.parentcontainer
+{
+
+  white-space: nowrap;
+}
+
+.block{
+
+  display:inline-block;
+  margin:0 3em;
+}
+
+
+
 .form-style-1 {
   margin:10px auto;
   max-width: 400px;
@@ -85,55 +119,12 @@ select{
   color:red;
 }
 
-.navbar-default, .navbar-inverse, .navbar-default .navbar-toggle{
-  border:2px;
-  padding: 15px 0px;
-  position: relative;
-  text-align: left;
-  max-width: 1150px;
-  margin: 0 auto;
+
+form{
+  background: rgba(255,255,255,.85);
+
 }
 
-.navbar-nav li a {
-  line-height: 50px;
-  height: 50px !important;
-  padding-top: 0;
-}
-
-ul {
-  margin: 1px;
-  padding: 0px;
-}
-
-
-.navbar-nav li {
-  float: none;
-  display: inline-block;
-}
-
-li a {
-  display: block;
-  color: white;
-  border:2px;
-  background-color: #333;
-  text-align: center;
-  padding: 50px 39px;
-}
-li a:hover {
-  background-color: #555;
-  color: white;
-}
-
-
-
-.dropdown:focus, .dropdown:hover .dropdown-menu{
-  color:#000 !important;
-  display: block;
-  margin-top: 0;
-  background-color: #333;
-}
-
-.sample { background-image: url(../../../assets/home/MainLogo.png); }
 body{
 
   margin: 0 auto;
@@ -145,3 +136,23 @@ body{
   border-bottom-color: rgba(60,60,60,.4);
   border-right-color: rgba(60,60,60,.4);
 }
+
+
+#TopImages {
+  z-index: 3;
+  position: relative;
+  padding: 0;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 20px;
+  text-align:center;
+}
+TopImages img{
+
+  height: auto;
+  width: auto;
+  vertical-align: middle;
+
+}
+
+

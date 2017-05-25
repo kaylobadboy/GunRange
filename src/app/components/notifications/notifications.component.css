@@ -1,0 +1,32 @@
+.notifications -webkit-input-placeholder {
+  text-align: center;
+}
+
+.notifications -moz-placeholder { /* Firefox 18- */
+  text-align: center;
+}
+
+.notifications -moz-placeholder {  /* Firefox 19+ */
+  text-align: center;
+}
+
+.notifications -ms-input-placeholder {
+  text-align: center;
+}
+.notifications {
+   margin: 16px auto;text-align: center;      display:block;
+
+}
+.event {
+   margin:8px auto;border-radius: 3em;background-color: limegreen;color: whitesmoke;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  font: 1em "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.warning {
+  margin:8px auto;border-radius: 3em;background-color: red;color:  whitesmoke;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  font: 1em "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}

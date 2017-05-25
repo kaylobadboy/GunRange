@@ -1,4 +1,4 @@
-
+<div class = "container">
 <app-upperlogo></app-upperlogo>
 
 
@@ -24,32 +24,42 @@
         <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
           <a [routerLink]="['/']">Home</a></li>
         <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-          <a [routerLink]="['Member']">Member</a></li>
+          <a [routerLink]="['/Member']">Member</a></li>
         <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-          <a [routerLink]="['News']">News & Info</a></li>
+          <a [routerLink]="['/News']">News & Info</a></li>
         <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-          <a [routerLink]="['Contact']">Contact</a></li>
-        <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-          <a [routerLink]="['Admin']">Admin Panel</a></li>
+          <a [routerLink]="['/Contact']">Contact</a></li>
+        <li *ngIf="LoginService.loggedin()" >
+          <a [routerLink]="['/Admin']">Admin Panel</a>
+        <!--</li>-->
 
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <!--<li><a href="#">Link</a></li>-->
 
         <li class="dropdown" >
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
+          <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Login</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Sign Up</a></li>
-            <li><a href="#">Forgot Username/Password</a></li>
+            <li>
+            <li *ngIf="LoginService.loggedin() == false" >
+            <a [routerLink]="['Login']">Login</a>
+          </li>
+
+
+            <li *ngIf="LoginService.loggedin()" >
+            <a [routerLink]="['/']" (click)="LoginService.logout()">Logout</a>
+            </li>
+
           </ul>
+
         </li>
+
+
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-
+</div>
 
 <!--<nav _ngcontent-c1="" class="navbar navbar-inverse">-->
   <!--<div _ngcontent-c1="" class="container-fluid">-->

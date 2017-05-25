@@ -3,11 +3,11 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
-import { UpperlogoComponent } from './upperlogo/upperlogo.component';
-import { HomeComponent } from './home/home.component';
-import { MembershipComponent } from './membership/membership.component';
-import { NewsEventsComponent } from './news-events/news-events.component';
-import { ContactComponent } from './contact/contact.component';
+import { UpperlogoComponent } from './components/upperlogo/upperlogo.component';
+import { HomeComponent } from './pages/home/home.component';
+import { MembershipComponent } from './pages/membership/membership.component';
+import { NewsEventsComponent } from './pages/news-events/news-events.component';
+import { ContactComponent } from './pages/contact/contact.component';
 import {routing} from './app.routing';
 import { AdminPanelComponent } from './pages/admin-panel-base/admin-panel.component';
 import { AgmCoreModule } from 'angular2-google-maps/core';
@@ -20,6 +20,10 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import {environment} from '../environments/environment';
 import {AddAdminComponent} from './pages/admin-panel/add-admin/add-admin.component';
 import {EditHomePageComponent} from './pages/admin-panel/edit-home-page/edit-home-page.component';
+import {LoginService} from "./services/login.service";
+import { NotificationsComponent } from './components/notifications/notifications.component';
+import { LoginComponent } from './pages/login/login.component';
+import {AuthGaurd} from "./components/guards/auth.guard";
 
 
 @NgModule({
@@ -35,7 +39,9 @@ import {EditHomePageComponent} from './pages/admin-panel/edit-home-page/edit-hom
     SponsorstripComponent,
     FooterComponent,
     EditHomePageComponent,
-    AddAdminComponent
+    AddAdminComponent,
+    NotificationsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +55,7 @@ import {EditHomePageComponent} from './pages/admin-panel/edit-home-page/edit-hom
     }),
     routing
   ],
-  providers: [],
+  providers: [LoginService, AuthGaurd],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

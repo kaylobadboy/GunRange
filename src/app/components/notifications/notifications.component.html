@@ -1,0 +1,28 @@
+<div class ="notifications" style="width: 60em">
+
+
+  <ng-container *ngFor="let item of items | async ">
+    <div align="center" *ngIf="check(item)=== 'Event'">
+
+      <form class = "event">
+
+        {{item.msg  }}
+      </form>
+    </div>
+  </ng-container>
+
+  <ng-container *ngFor="let item of items | async ">
+    <div align="center" *ngIf="check(item)!== 'Event'">
+
+      <form class = "warning">
+
+
+        {{item.msg  }}
+      </form>
+
+    </div>
+  </ng-container>
+
+
+
+</div>

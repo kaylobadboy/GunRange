@@ -13,27 +13,34 @@ export class LoginService {
   token: string = null;
   user: Observable<firebase.User>;
 
-
-  constructor(public afAuth: AngularFireAuth, public router: Router) {
+  constructor(public afAuth: AngularFireAuth) {
     this.user = afAuth.authState;
   }
 
-  login() {
-    this.router.navigate(['']);
+  loggedin() {
+    return (firebase.auth().currentUser) ? true : false;
   }
+  login(email: string, password: string) {
+    console.log(email + password);
+    firebase.auth().signInWithEmailAndPassword(email, password).then(function () {
+      console.log('Login Successfull');
+    })
 
-  loggedin(){
-    return this.user;
-  }
-    logout(){
-      firebase.auth().signOut().then(function() {
-        console.log('Sign-out successful');
-        this.LoginService.logout();
 
-      }).catch(function(error) {
-        console.log('Sign-out error');
+      .catch(function (error) {
+        console.log(error);
+
+
       });
   }
+    logout() {
+
+      firebase.auth().signOut().then(function() {
+        console.log('Signed Out');
+      }, function(error) {
+        console.error('Sign Out Error', error);
+      });
+      }
 
 
 }
