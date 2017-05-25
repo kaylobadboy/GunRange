@@ -1,0 +1,26 @@
+<body>
+<div style="padding-top: 1rem">
+  <form class="form-horizontal" #form="ngForm" style="width: 30em; margin:auto;text-align: center;      display:block; " >
+
+
+    <ul class="form-style-1" style="margin: 0 auto; display:block; text-align: center">
+      <h3>Create Additional Admin Account</h3>
+      <div class="panel-body">
+
+
+        <div class="form-group">
+          <label for="email">Username/Email address:</label>
+          <input type="email" id="email" #email class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input type="password" id="pwd" #pwd class="form-control">
+        </div>
+        <button type="submit" (click)="login(email.value,pwd.value)" class="btn btn-default">Submit</button>
+
+      </div>
+    </ul>
+
+  </form>
+</div>
+</body>

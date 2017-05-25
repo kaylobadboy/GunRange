@@ -1,0 +1,64 @@
+<body>
+<div style="padding-top: 1rem"> </div>
+<form style="width: 65em; margin:auto;text-align: center;      display:block; " >
+  <div id="Submission" align="center">
+    <ul class="form-style-1" style="padding: 0;font-weight: bold;
+    display:inline;
+    font-size: 24px;
+    text-shadow: 1px 1px 1px #fff;">
+
+
+      <li><label for="alert">Push Message to Front Page</label> </li>
+      <input type="text" id="alert" #alert style="width:98%">
+
+      <li> <select for="type" #type>
+      <option value="Event">Event</option>
+        <option value="Warning">Warning/Notice</option>
+
+      </select></li>
+      <li><button (click)="addItem(alert.value, type.value)">Push to Homepage</button></li>
+
+
+
+      <li><button (click)="deleteEverything()"> Remove all</button></li>
+
+
+    </ul>
+  </div>
+</form>
+
+
+
+
+  <div style="padding-top: 4rem"> </div>
+<div align="center" style="display:block;width:100%">
+
+
+  <ng-container *ngFor="let item of items | async ">
+    <div align="center" *ngIf="check(item)=== 'Event'">
+
+      <form style="width: 60em; height: 3.2em;margin:8px auto;text-align: center;display:inline-block;border-radius: 3em;background-color: limegreen;color: whitesmoke;">
+
+        {{item.msg | json }}
+      </form>
+      <button (click)=" deleteItem(item.$key)"> Delete</button>
+    </div>
+  </ng-container>
+
+  <ng-container *ngFor="let item of items | async ">
+    <div align="center" *ngIf="check(item)!== 'Event'">
+
+      <form style="width: 60em; height: 3.2em;margin:8px auto;text-align: center;display:inline-block;border-radius: 3em;background-color: red;color:  whitesmoke;">
+
+
+        {{item.msg | json }}
+      </form>
+      <button (click)=" deleteItem(item.$key)"> Delete</button>
+    </div>
+  </ng-container>
+
+
+
+</div>
+
+</body>

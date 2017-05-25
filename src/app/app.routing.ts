@@ -5,7 +5,7 @@ import {NewsEventsComponent} from "./news-events/news-events.component";
 import {MembershipComponent} from "./membership/membership.component";
 import {HomeComponent} from "./home/home.component";
 import {ContactComponent} from "./contact/contact.component";
-import {AdminPanelComponent} from "./admin-panel/admin-panel.component";
+import {AdminPanelComponent} from "./pages/admin-panel-base/admin-panel.component";
 
 
 const APP_ROUTES: Routes = [
