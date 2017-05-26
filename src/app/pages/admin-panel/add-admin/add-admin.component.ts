@@ -11,27 +11,10 @@ import {LoginService} from '../../../services/login.service';
 })
 export class AddAdminComponent  {
 
-  user: Observable<firebase.User>;
 
-  constructor(public afAuth: AngularFireAuth, public LoginService: LoginService ) {
-    this.user = afAuth.authState;
+  constructor(public LoginService: LoginService ) {
   }
 
-  login(email: string, password: string) {
-    console.log(email + password);
-    firebase.auth().createUserWithEmailAndPassword(email, password).then(function(){
-      console.log('Registration Successfull');
-    })
-
-
-
-      .catch(function(error) {
-        console.log(error);
-
-
-    });
-
-  }
 
 }
 

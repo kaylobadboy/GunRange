@@ -10,6 +10,7 @@ import {AddAdminComponent} from "./pages/admin-panel/add-admin/add-admin.compone
 import {EditHomePageComponent} from "./pages/admin-panel/edit-home-page/edit-home-page.component";
 import {LoginComponent} from "./pages/login/login.component";
 import {AuthGaurd} from "./components/guards/auth.guard";
+import {ViewusersComponent} from "./pages/admin-panel/viewusers/viewusers.component";
 
 
 const APP_ROUTES: Routes = [
@@ -21,6 +22,7 @@ const APP_ROUTES: Routes = [
   { path: 'Admin', component: AdminPanelComponent, canActivate: [AuthGaurd]},
   { path: 'Admin/AddAdmin', component: AddAdminComponent, canActivate: [AuthGaurd] },
   { path: 'Admin/EditHome', component: EditHomePageComponent, canActivate: [AuthGaurd]},
+  { path: 'Admin/ViewUsers', component: ViewusersComponent, canActivate: [AuthGaurd]},
   { path: 'Login', component: LoginComponent}
 // ,
   // {path:  '', component: UserComponent }

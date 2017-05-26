@@ -16,7 +16,7 @@
           <label for="pwd">Password:</label>
           <input type="password" id="pwd" #pwd class="form-control">
         </div>
-        <button type="submit" (click)="login(email.value,pwd.value)" class="btn btn-default">Submit</button>
+        <button type="submit" (click)="LoginService.register(email.value,pwd.value)" class="btn btn-default">Submit</button>
 
       </div>
     </ul>

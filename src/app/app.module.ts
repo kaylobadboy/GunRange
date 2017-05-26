@@ -24,6 +24,9 @@ import {LoginService} from "./services/login.service";
 import { NotificationsComponent } from './components/notifications/notifications.component';
 import { LoginComponent } from './pages/login/login.component';
 import {AuthGaurd} from "./components/guards/auth.guard";
+import { ViewusersComponent } from './pages/admin-panel/viewusers/viewusers.component';
+import { TableComponent } from './components/table/table.component';
+import { UserFormComponent } from './components/user-form/user-form.component';
 
 
 @NgModule({
@@ -41,7 +44,10 @@ import {AuthGaurd} from "./components/guards/auth.guard";
     EditHomePageComponent,
     AddAdminComponent,
     NotificationsComponent,
-    LoginComponent
+    LoginComponent,
+    ViewusersComponent,
+    TableComponent,
+    UserFormComponent
   ],
   imports: [
     BrowserModule,

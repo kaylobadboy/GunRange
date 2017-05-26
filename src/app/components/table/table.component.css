@@ -1,0 +1,55 @@
+.pointer {
+  cursor: pointer;
+}
+.header-checkbox {
+  width: 100px;
+}
+.header-data {
+  padding: 0 24px;
+  cursor: pointer;
+}
+.data-checkbox {
+  width: 100px;
+  text-align: center;
+}
+.data-column {
+  padding-top: 12px;
+  transition: background-color 0.2s;
+  height: 48px;
+}
+.fa-checkbox {
+  display: block;
+}
+.fa-check {
+  position: absolute;
+  margin-top: -30px;
+  margin-left: 32px;
+  color: green;
+}
+.toolbar {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.header {
+  float: left;
+  margin-top: -5px;
+}
+.buttons {
+  float: right;
+}
+.delete {
+  cursor: pointer;
+  display: inline-block;
+}
+.error {
+  display: inline-block;
+  color: red;
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 18px;
+}
+.edit {
+  position: absolute;
+  right: 45px;
+  margin-top: 2px;
+}

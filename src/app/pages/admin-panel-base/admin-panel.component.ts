@@ -17,6 +17,11 @@ btnClick1() {
 
 
   }
+  btnClick3() {
+    this.router.navigateByUrl('/Admin/ViewUsers');
+
+
+  }
   ngOnInit() {
   }
 

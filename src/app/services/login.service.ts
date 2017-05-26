@@ -16,7 +16,21 @@ export class LoginService {
   constructor(public afAuth: AngularFireAuth) {
     this.user = afAuth.authState;
   }
+  register(email: string, password: string) {
+    console.log(email + password);
+    firebase.auth().createUserWithEmailAndPassword(email, password).then(function(){
+      console.log('Registration Successfull');
+    })
 
+
+
+      .catch(function(error) {
+        console.log(error);
+
+
+      });
+
+  }
   loggedin() {
     return (firebase.auth().currentUser) ? true : false;
   }
