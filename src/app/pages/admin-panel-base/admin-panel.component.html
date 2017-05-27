@@ -1,26 +1,37 @@
 <body>
 
-
-<form _ngcontent-c8="" novalidate="" style="width: 60em; margin:auto;text-align: center;      display:inline; " class="ng-untouched ng-pristine ng-valid">
-  <div _ngcontent-c8="" id="Submission" align="center">
-    <ul _ngcontent-c8="" class="form-style-1" style="padding: 0;font-weight: bold;
-    display:inline-block
-    ;
-    font-size: 24px;
+<form style="text-align: center;float:left;     display:block; " >
+<div style="text-align:center">
+    <ul  class="form-style-1" style="padding: 0 2em 0 2em ;font-weight: bold;
+    display:inline-block;
+    font-size: 12px;
     text-shadow: 1px 1px 1px #fff;">
 
-      <li>
-        <button  (click)="btnClick3()" > View Users </button>
-      </li>
 
-      <li>
-      <button  (click)="btnClick1()" > Edit Home Page Events </button>
-      </li>
 
-      <li>
-      <button (click)="btnClick2()"> Add Additional Admin </button>
-      </li>
+      <li> <p> Username: {{ LoginService.getCurrentUserShortened()}} </p> </li>
+      <li> <p> Email: {{ LoginService.getCurrentUser()}}  </p> </li>
+      <li> <p> {{ ( LoginService.user | async)?.uid }} </p> </li>
     </ul>
-  </div>
+</div>
+
 </form>
+<form style="text-align: center;     display:block; " >
+  <ul  class="form-style-1" style="padding: 0 2em 0 2em ;font-weight: bold;">
+  <div style= "text-align:center">
+    <li>
+      <button  (click)="btnClick3()" > View Users </button>
+    </li>
+
+    <li>
+      <button  (click)="btnClick1()" > Edit Home Page Events </button>
+    </li>
+
+    <li>
+      <button (click)="btnClick2()"> Add Additional Admin </button>
+    </li>
+  </div>
+  </ul>
+</form>
+
 </body>

@@ -34,25 +34,41 @@
         <!--</li>-->
 
       </ul>
+
+
+
+
       <ul class="nav navbar-nav navbar-right">
         <!--<li><a href="#">Link</a></li>-->
 
-        <li class="dropdown" >
+        <li *ngIf="LoginService.loggedin() == false" class="dropdown" >
           <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li>
-            <li *ngIf="LoginService.loggedin() == false" >
+            <li>
             <a [routerLink]="['Login']">Login</a>
           </li>
 
 
-            <li *ngIf="LoginService.loggedin()" >
-            <a [routerLink]="['/']" (click)="LoginService.logout()">Logout</a>
-            </li>
+            <!--<li *ngIf="LoginService.loggedin()" >-->
+            <!--<a [routerLink]="['/']" (click)="LoginService.logout()">Logout</a>-->
+            <!--</li>-->
 
           </ul>
-
         </li>
+        <li *ngIf="LoginService.loggedin() == true" class="dropdown" >
+          <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ LoginService.getCurrentUserShortened()}} <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li>
+
+
+              <li>
+            <a [routerLink]="['/']" (click)="LoginService.logout()">Logout</a>
+          </li>
+
+          </ul>
+        </li>
+
 
 
       </ul>

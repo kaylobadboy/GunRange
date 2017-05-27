@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
+import {LoginService} from '../../services/login.service';
 
 @Component({
   selector: 'app-admin-panel',
@@ -8,7 +9,7 @@ import {Router} from "@angular/router";
 })
 export class AdminPanelComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, public LoginService: LoginService) { }
 btnClick1() {
   this.router.navigateByUrl('/Admin/EditHome');
 }
