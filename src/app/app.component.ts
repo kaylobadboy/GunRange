@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from './components/header/header.component';
 import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,7 @@ export class AppComponent {
   lng = -97.08669409999999;
   items: FirebaseListObservable<any[]>;
 
-  constructor(db: AngularFireDatabase) {
+  constructor(db: AngularFireDatabase, private router: Router) {
     this.items = db.list('/items');
   }
 

@@ -28,4 +28,20 @@ const APP_ROUTES: Routes = [
   // {path:  '', component: UserComponent }
 ];
 
-export const routing = RouterModule.forRoot(APP_ROUTES);
+export const routing = RouterModule.forRoot(APP_ROUTES, {useHash: true});
+
+
+// const APP_ROUTES: Routes = [
+//   { path: 'kristopherlommen.github.io/GunRange//', component: HomeComponent},
+//
+//   { path: 'kristopherlommen.github.io/GunRange//Member', component: MembershipComponent},
+//   { path: 'kristopherlommen.github.io/GunRange/News',  component: NewsEventsComponent},
+//   { path: 'kristopherlommen.github.io/GunRange/Contact', component: ContactComponent},
+//   { path: 'kristopherlommen.github.io/GunRange//Admin', component: AdminPanelComponent, canActivate: [AuthGaurd]},
+//   { path: 'kristopherlommen.github.io/GunRange//Admin/AddAdmin', component: AddAdminComponent, canActivate: [AuthGaurd] },
+//   { path: 'kristopherlommen.github.io/GunRange//Admin/EditHome', component: EditHomePageComponent, canActivate: [AuthGaurd]},
+//   { path: 'kristopherlommen.github.io/GunRange//Admin/ViewUsers', component: ViewusersComponent, canActivate: [AuthGaurd]},
+//   { path: 'kristopherlommen.github.io/GunRange//Login', component: LoginComponent}
+// // ,
+//   // {path:  '', component: UserComponent }
+// ];
