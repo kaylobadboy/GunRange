@@ -3,6 +3,11 @@
   border: 0px solid #333;
   overflow: auto
 }
+
+.column-center{ display: inline-block;  }
+
+
+
 .post-thumb-right {
   float: right
 }

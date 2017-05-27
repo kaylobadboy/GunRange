@@ -12,7 +12,14 @@ export class LoginService {
   headers: Headers;
   token: string = null;
   user: Observable<firebase.User>;
-  constructor(public afAuth: AngularFireAuth) {
+  constructor(public afAuth: AngularFireAuth, public router: Router) {
+
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        router.navigateByUrl('/Admin');
+      }
+    });
+
     this.user = afAuth.authState;
   }
 getCurrentUser() {
@@ -24,6 +31,7 @@ getCurrentUser() {
     console.log(email + password);
     firebase.auth().createUserWithEmailAndPassword(email, password).then(function () {
       console.log('Registration Successfull');
+
     })
 
 
@@ -41,11 +49,7 @@ getCurrentUser() {
 
   login(email: string, password: string) {
     console.log(email + password);
-    firebase.auth().signInWithEmailAndPassword(email, password).then(function () {
-
-      console.log(firebase.auth().currentUser);
-      console.log(firebase.auth().currentUser.email);
-      console.log('Login Successfull');
+    firebase.auth().signInWithEmailAndPassword(email, password).then(function ( ) {
 
     })
 
@@ -55,6 +59,9 @@ getCurrentUser() {
         alert(error);
 
       });
+
+
+
   }
 
     logout() {
